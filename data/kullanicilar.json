@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "ad": "Ayşe",
+    "email": "ayse@example.com",
+    "sifreHash": "$2b$10$Z8HRusa/7m6kpBHavorTzuebkkyABowtOSFbyF7astu4FTAErKyrS",
+    "rol": "user"
+  },
+  {
+    "id": 2,
+    "ad": "Göksu",
+    "email": "goksu@example.com",
+    "sifreHash": "$2b$10$KEculWDr8FcdIer7GR1EweaHF8y3iAfcDkkWK118D7I47zArdFPbW",
+    "rol": "user"
+  },
+  {
+    "id": 3,
+    "ad": "Zeynep",
+    "email": "zeynep@example.com",
+    "sifreHash": "$2b$10$mgbDhBh0lHETFty0j1Br1efuEzDzyK5NIVTwOvnbMfW7dJhqr36we",
+    "rol": "user"
+  }
+]

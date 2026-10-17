@@ -1,9 +1,9 @@
 [
   {
     "id": 1,
-    "ad": "Kampüs İstasyonu",
-    "konum": "Talas",
-    "kapasite": 10
+    "ad": "Talas Kampüs İstasyonu",
+    "konum": "Kayseri, Talas",
+    "kapasite": 25
   },
   {
     "id": 2,
