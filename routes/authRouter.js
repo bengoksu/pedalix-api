@@ -3,9 +3,11 @@ const fs = require("fs/promises");
 const path = require("path");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
+const kullaniciDoğrula = require("../middleware/kullaniciDoğrulama");
+const loginDogrulama = require("../middleware/loginDoğrulama");
 const router = express.Router();
 
-router.post("/register", async (req, res) => {
+router.post("/register", kullaniciDoğrula, async (req, res) => {
   try {
     const ad = req.body.ad;
     const email = req.body.email;
@@ -44,7 +46,7 @@ router.post("/register", async (req, res) => {
       .json({ mesaj: "Kullanıcı kaydı sırasında hata oluştu." });
   }
 });
-router.post("/login", async (req, res) => {
+router.post("/login", loginDogrulama, async (req, res) => {
   try {
     const email = req.body.email;
     const sifre = req.body.sifre;
