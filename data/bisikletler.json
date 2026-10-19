@@ -2,36 +2,36 @@
   {
     "id": 1,
     "istasyonId": 1,
-    "durum": "musait"
+    "durum": "rezerve"
   },
   {
     "id": 2,
     "istasyonId": 3,
-    "durum": "musait"
+    "durum": "rezerve"
   },
   {
     "id": 3,
     "istasyonId": 2,
-    "durum": "musait"
+    "durum": "rezerve"
   },
   {
     "id": 4,
     "istasyonId": 1,
-    "durum": "musait"
+    "durum": "rezerve"
   },
   {
     "id": 5,
     "istasyonId": 4,
-    "durum": "musait"
+    "durum": "rezerve"
   },
   {
     "id": 6,
     "istasyonId": 2,
-    "durum": "musait"
+    "durum": "rezerve"
   },
   {
     "id": 7,
     "istasyonId": 3,
-    "durum": "musait"
+    "durum": "rezerve"
   }
 ]
