@@ -23,5 +23,15 @@
     "id": 5,
     "istasyonId": 4,
     "durum": "musait"
+  },
+  {
+    "id": 6,
+    "istasyonId": 2,
+    "durum": "musait"
+  },
+  {
+    "id": 7,
+    "istasyonId": 3,
+    "durum": "musait"
   }
 ]
