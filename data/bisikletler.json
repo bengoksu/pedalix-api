@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "istasyonId": 1,
+    "durum": "musait"
+  },
+  {
+    "id": 2,
+    "istasyonId": 3,
+    "durum": "musait"
+  },
+  {
+    "id": 3,
+    "istasyonId": 2,
+    "durum": "musait"
+  },
+  {
+    "id": 4,
+    "istasyonId": 1,
+    "durum": "musait"
+  },
+  {
+    "id": 5,
+    "istasyonId": 4,
+    "durum": "musait"
+  }
+]
