@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "kullaniciId": 2,
+    "bisikletId": 1,
+    "baslangicZamani": "2026-10-21T17:55:01.886Z",
+    "bitisZamani": null,
+    "baslangicIstasyonId": 1,
+    "bitisIstasyonId": null,
+    "durum": "aktif",
+    "ucret": 0
+  },
+  {
+    "id": 2,
+    "kullaniciId": 1,
+    "bisikletId": 3,
+    "baslangicZamani": "2026-10-21T18:05:38.991Z",
+    "bitisZamani": "2026-10-21T18:23:47.525Z",
+    "baslangicIstasyonId": 2,
+    "bitisIstasyonId": 1,
+    "durum": "tamamlandi",
+    "ucret": 20
+  }
+]

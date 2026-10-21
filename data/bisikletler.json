@@ -1,8 +1,8 @@
 [
   {
     "id": 1,
-    "istasyonId": 1,
-    "durum": "rezerve"
+    "istasyonId": null,
+    "durum": "kirada"
   },
   {
     "id": 2,
@@ -11,13 +11,13 @@
   },
   {
     "id": 3,
-    "istasyonId": 2,
-    "durum": "rezerve"
+    "istasyonId": 1,
+    "durum": "musait"
   },
   {
     "id": 4,
     "istasyonId": 1,
-    "durum": "rezerve"
+    "durum": "musait"
   },
   {
     "id": 5,
@@ -27,11 +27,11 @@
   {
     "id": 6,
     "istasyonId": 2,
-    "durum": "rezerve"
+    "durum": "musait"
   },
   {
     "id": 7,
     "istasyonId": 3,
-    "durum": "rezerve"
+    "durum": "musait"
   }
 ]

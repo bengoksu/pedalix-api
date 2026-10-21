@@ -5,6 +5,7 @@ const istasyonRouter = require("./routes/istasyonRouter");
 const authRouter = require("./routes/authRouter");
 const bisikletRouter = require("./routes/bisikletRouter");
 const rezervasyonRouter = require("./routes/rezervasyonRouter");
+const kiralamaRouter = require("./routes/kiralamaRouter");
 const logger = require("./middleware/logger");
 const hataYakalayici = require("./middleware/hataYakalayici");
 const app = express();
@@ -16,6 +17,7 @@ app.use("/istasyonlar", istasyonRouter);
 app.use("/auth", authRouter);
 app.use("/bisikletler", bisikletRouter);
 app.use("/rezervasyonlar", rezervasyonRouter);
+app.use("/kiralamalar", kiralamaRouter);
 app.use(hataYakalayici);
 
 app.listen(port, () => {
