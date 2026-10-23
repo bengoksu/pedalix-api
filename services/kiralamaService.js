@@ -1,6 +1,7 @@
 const path = require("path");
 const fs = require("fs/promises");
 const ApiHatasi = require("../middleware/ApiHatasi");
+const rezervasyonService = require("./rezervasyonService");
 const kiralamaListele = async (kullaniciId) => {
   const dosyaYolu = path.join(__dirname, "../data/kiralamalar.json");
   const veri = await fs.readFile(dosyaYolu, "utf-8");
@@ -20,6 +21,7 @@ const idIleKiralamaGetir = async (id, kullaniciId) => {
   return kiralama;
 };
 const kiralamaBaslat = async (kullaniciId, bisikletId) => {
+  await rezervasyonService.suresiDolanRezervasyonlariKontrolEt();
   // 1. Bisikleti bul ve kontrol et
   const bisikletDosyaYolu = path.join(__dirname, "../data/bisikletler.json");
   const bisikletVeri = await fs.readFile(bisikletDosyaYolu, "utf-8");

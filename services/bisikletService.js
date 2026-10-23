@@ -1,9 +1,11 @@
 const fs = require("fs/promises");
 const path = require("path");
 const istasyonService = require("./istasyonService");
+const rezervasyonService = require("./rezervasyonService");
 const ApiHatasi = require("../middleware/ApiHatasi");
 
 const bisikletListele = async () => {
+  await rezervasyonService.suresiDolanRezervasyonlariKontrolEt();
   const dosyaYolu = path.join(__dirname, "../data/bisikletler.json");
   const veri = await fs.readFile(dosyaYolu, "utf-8");
   const bisikletler = JSON.parse(veri);

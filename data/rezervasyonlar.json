@@ -5,7 +5,7 @@
     "bisikletId": 1,
     "baslangicZamani": "2026-10-19T21:53:53.382Z",
     "bitisZamani": "2026-10-19T22:03:53.382Z",
-    "durum": "aktif"
+    "durum": "suresi_doldu"
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "bisikletId": 2,
     "baslangicZamani": "2026-10-19T21:54:06.511Z",
     "bitisZamani": "2026-10-19T22:04:06.511Z",
-    "durum": "aktif"
+    "durum": "suresi_doldu"
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "bisikletId": 3,
     "baslangicZamani": "2026-10-19T21:54:12.654Z",
     "bitisZamani": "2026-10-19T22:04:12.654Z",
-    "durum": "aktif"
+    "durum": "suresi_doldu"
   },
   {
     "id": 4,
@@ -29,7 +29,7 @@
     "bisikletId": 4,
     "baslangicZamani": "2026-10-19T21:54:15.604Z",
     "bitisZamani": "2026-10-19T22:04:15.604Z",
-    "durum": "aktif"
+    "durum": "suresi_doldu"
   },
   {
     "id": 5,
@@ -37,7 +37,7 @@
     "bisikletId": 5,
     "baslangicZamani": "2026-10-19T21:54:18.907Z",
     "bitisZamani": "2026-10-19T22:04:18.907Z",
-    "durum": "aktif"
+    "durum": "suresi_doldu"
   },
   {
     "id": 6,
@@ -45,7 +45,7 @@
     "bisikletId": 6,
     "baslangicZamani": "2026-10-19T21:54:22.247Z",
     "bitisZamani": "2026-10-19T22:04:22.247Z",
-    "durum": "aktif"
+    "durum": "suresi_doldu"
   },
   {
     "id": 7,
@@ -53,6 +53,6 @@
     "bisikletId": 7,
     "baslangicZamani": "2026-10-19T21:54:25.680Z",
     "bitisZamani": "2026-10-19T22:04:25.680Z",
-    "durum": "aktif"
+    "durum": "suresi_doldu"
   }
 ]

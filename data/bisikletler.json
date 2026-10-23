@@ -7,7 +7,7 @@
   {
     "id": 2,
     "istasyonId": 3,
-    "durum": "rezerve"
+    "durum": "musait"
   },
   {
     "id": 3,
@@ -22,7 +22,7 @@
   {
     "id": 5,
     "istasyonId": 4,
-    "durum": "rezerve"
+    "durum": "musait"
   },
   {
     "id": 6,
