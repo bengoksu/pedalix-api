@@ -5,6 +5,7 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const kullaniciDoğrula = require("../middleware/kullaniciDoğrulama");
 const loginDogrulama = require("../middleware/loginDoğrulama");
+const authMiddleware = require("../middleware/authMiddleware");
 const router = express.Router();
 
 router.post("/register", kullaniciDoğrula, async (req, res) => {
@@ -78,5 +79,111 @@ router.post("/login", loginDogrulama, async (req, res) => {
       .json({ mesaj: "Kullanıcı girişi sırasında hata oluştu." });
   }
 });
+router.get("/profile", authMiddleware, async (req, res, next) => {
+  try {
+    const kullaniciId = Number(req.user.id);
 
+    const dosyaYolu = path.join(__dirname, "../data/kullanicilar.json");
+    const veri = await fs.readFile(dosyaYolu, "utf-8");
+    const kullanicilar = JSON.parse(veri);
+
+    const kullanici = kullanicilar.find((k) => k.id === kullaniciId);
+
+    if (!kullanici) {
+      return res.status(404).json({
+        mesaj: "Kullanıcı bulunamadı.",
+      });
+    }
+
+    res.status(200).json({
+      profil: {
+        id: kullanici.id,
+        ad: kullanici.ad,
+        email: kullanici.email,
+        rol: kullanici.rol,
+      },
+    });
+  } catch (error) {
+    next(error);
+  }
+});
+router.patch("/profile", authMiddleware, async (req, res, next) => {
+  try {
+    const kullaniciId = Number(req.user.id);
+    const { ad, email } = req.body;
+
+    //  Güncellenecek bilgileri kontrol et
+    if (
+      typeof ad !== "string" ||
+      !ad.trim() ||
+      typeof email !== "string" ||
+      !email.trim()
+    ) {
+      return res.status(400).json({
+        mesaj: "Geçerli bir ad ve e-posta giriniz.",
+      });
+    }
+
+    const yeniAd = ad.trim();
+    const yeniEmail = email.trim().toLowerCase();
+
+    // Kullanıcıları oku
+    const dosyaYolu = path.join(__dirname, "../data/kullanicilar.json");
+    const veri = await fs.readFile(dosyaYolu, "utf-8");
+    const kullanicilar = JSON.parse(veri);
+
+    //  Giriş yapan kullanıcıyı bul
+    const kullanici = kullanicilar.find((k) => k.id === kullaniciId);
+
+    if (!kullanici) {
+      return res.status(404).json({
+        mesaj: "Kullanıcı bulunamadı.",
+      });
+    }
+
+    //  E-posta formatını kontrol et
+    const emailFormati = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailFormati.test(yeniEmail)) {
+      return res.status(400).json({
+        mesaj: "Geçerli bir e-posta adresi giriniz.",
+      });
+    }
+
+    //  E-posta başka kullanıcı tarafından kullanılıyor mu?
+    const emailKullaniliyor = kullanicilar.some(
+      (k) => k.id !== kullaniciId && k.email.toLowerCase() === yeniEmail,
+    );
+
+    if (emailKullaniliyor) {
+      return res.status(409).json({
+        mesaj: "Bu e-posta zaten kullanılıyor.",
+      });
+    }
+
+    //  Profili güncelle
+    kullanici.ad = yeniAd;
+    kullanici.email = yeniEmail;
+
+    //  JSON dosyasına kaydet
+    await fs.writeFile(
+      dosyaYolu,
+      JSON.stringify(kullanicilar, null, 2),
+      "utf-8",
+    );
+
+    //  Güncellenmiş profili gönder
+    res.status(200).json({
+      mesaj: "Profil başarıyla güncellendi.",
+      profil: {
+        id: kullanici.id,
+        ad: kullanici.ad,
+        email: kullanici.email,
+        rol: kullanici.rol,
+      },
+    });
+  } catch (error) {
+    next(error);
+  }
+});
 module.exports = router;

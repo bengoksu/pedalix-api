@@ -20,5 +20,38 @@
     "bitisIstasyonId": 1,
     "durum": "tamamlandi",
     "ucret": 20
+  },
+  {
+    "id": 3,
+    "kullaniciId": 1,
+    "bisikletId": 2,
+    "baslangicZamani": "2026-10-23T17:25:14.074Z",
+    "bitisZamani": "2026-10-23T17:29:00.131Z",
+    "baslangicIstasyonId": 3,
+    "bitisIstasyonId": 3,
+    "durum": "tamamlandi",
+    "ucret": 0
+  },
+  {
+    "id": 4,
+    "kullaniciId": 1,
+    "bisikletId": 5,
+    "baslangicZamani": "2026-10-23T17:35:04.552Z",
+    "bitisZamani": "2026-10-23T17:36:13.326Z",
+    "baslangicIstasyonId": 4,
+    "bitisIstasyonId": 6,
+    "durum": "tamamlandi",
+    "ucret": 20
+  },
+  {
+    "id": 5,
+    "kullaniciId": 1,
+    "bisikletId": 3,
+    "baslangicZamani": "2026-10-23T17:36:38.109Z",
+    "bitisZamani": null,
+    "baslangicIstasyonId": 1,
+    "bitisIstasyonId": null,
+    "durum": "aktif",
+    "ucret": 0
   }
 ]

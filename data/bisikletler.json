@@ -11,23 +11,23 @@
   },
   {
     "id": 3,
-    "istasyonId": 1,
-    "durum": "musait"
+    "istasyonId": null,
+    "durum": "kirada"
   },
   {
     "id": 4,
     "istasyonId": 1,
-    "durum": "musait"
+    "durum": "rezerve"
   },
   {
     "id": 5,
-    "istasyonId": 4,
+    "istasyonId": 6,
     "durum": "musait"
   },
   {
     "id": 6,
     "istasyonId": 2,
-    "durum": "musait"
+    "durum": "rezerve"
   },
   {
     "id": 7,
